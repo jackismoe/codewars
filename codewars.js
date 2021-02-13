@@ -63,3 +63,35 @@ console.log(findNextSquare(121))
 console.log(findNextSquare(625))
 console.log(findNextSquare(114))
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Very simple, given a number, find its opposite.
+const opposite = (number) => {
+   console.log(number * -1)
+  return number * -1
+}
+
+opposite(-1)
+opposite(24)
+opposite(14)
+opposite(-34)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+const squareSum = (numbers) => {
+  let sum = 0
+  for (let x of numbers) {
+    sum += x*x
+  }
+  return sum
+}
+
+squareSum([0, 3, 4, 5])
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Make a simple function called greet that returns the most-famous "hello world!".
+// const greet = () => {
+//   let alphabet = 'abcdefghijklmnopqrstuvwxyz '
+//   let array = alphabet.split('')
+//   let numbers = ['8', '5', '12', '12', '15', '27', '23', '15', '18', '12', '4']
+  
+// }
+
+// greet()
