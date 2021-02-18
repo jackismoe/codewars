@@ -125,3 +125,17 @@ const betterThanAverage = (array, myScore) => {
 }
 
 betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75)
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function setAlarm(employed, vacation){
+  if ((employed && vacation) || (!employed && !vacation) || vacation) {
+    console.log(false)
+    return false 
+  } else {
+    console.log(true)
+    return true
+  }
+}
+setAlarm(true, true) 
+setAlarm(false, true)
+setAlarm(false, false)
+setAlarm(true, false)
