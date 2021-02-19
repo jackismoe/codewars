@@ -7,7 +7,6 @@
 
 
 function findNeedle(array) {
-  console.log(`found the needle at position ${array.indexOf('needle')}`)
   for (let idx = 0; idx < array.length; idx++) {  
     if (array[idx] == 'needle') {
       return `found the needle at position ${idx}`
@@ -28,9 +27,9 @@ function howMuchWater(time) {
   return Math.floor(time * .5)
 }
 
-console.log(howMuchWater(3))
-console.log(howMuchWater(6.7))
-console.log(howMuchWater(11.8))
+howMuchWater(3)
+howMuchWater(6.7)
+howMuchWater(11.8)
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Polycarpus works as a DJ in the best Berland nightclub, and he often uses dubstep music in his performance. Recently, he has decided to take a couple of old songs and make dubstep remixes from them.
 // Let's assume that a song consists of some number of words (that don't contain WUB). To make the dubstep remix of this song, Polycarpus inserts a certain number of words "WUB" before the first word of the song (the number may be zero), after the last word (the number may be zero), and between words (at least one between any pair of neighbouring words), and then the boy glues together all the words, including "WUB", in one string and plays the song at the club.
@@ -43,8 +42,6 @@ console.log(howMuchWater(11.8))
 function songDecoder(song) {
   return song.replace(/(WUB)+/g," ").trim()
 }
-
-console.log(songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"))
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // You might know some pretty large perfect squares. But what about the NEXT one?
 
@@ -58,14 +55,12 @@ const findNextSquare = (n) => {
     return -1
   }
 }
-
-console.log(findNextSquare(121))
-console.log(findNextSquare(625))
-console.log(findNextSquare(114))
+findNextSquare(121)
+findNextSquare(625)
+findNextSquare(114)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Very simple, given a number, find its opposite.
 const opposite = (number) => {
-   console.log(number * -1)
   return number * -1
 }
 
@@ -128,10 +123,8 @@ betterThanAverage([100, 40, 34, 57, 29, 72, 57, 88], 75)
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function setAlarm(employed, vacation){
   if ((employed && vacation) || (!employed && !vacation) || vacation) {
-    console.log(false)
     return false 
   } else {
-    console.log(true)
     return true
   }
 }
@@ -139,3 +132,23 @@ setAlarm(true, true)
 setAlarm(false, true)
 setAlarm(false, false)
 setAlarm(true, false)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+// if bmi <= 18.5 return "Underweight"
+// if bmi <= 25.0 return "Normal"
+// if bmi <= 30.0 return "Overweight"
+// if bmi > 30 return "Obese"
+const bmi = (weight, height) => {
+  let calculatedBmi = weight / (height * height)
+  if (calculatedBmi <= 18.5) {
+    return 'Underweight'
+  } else if (calculatedBmi <= 25.0) {
+    return 'Normal'
+  } else if (calculatedBmi <= 30.0) {
+    return 'Overweight'
+  } else {
+    return 'Obese'
+  }
+}
+
+console.log(bmi(80, 1.80))
