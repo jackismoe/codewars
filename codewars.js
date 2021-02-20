@@ -152,3 +152,26 @@ const bmi = (weight, height) => {
 }
 
 console.log(bmi(80, 1.80))
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Given an array of integers.
+// Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+// If the input array is empty or null, return an empty array.
+const countPositivesSumNegatives = (input) => {
+  let positives = 0
+  let negatives = 0
+  if (input == null || input.length == 0) {
+    return []
+  } else {
+    for (let number of input) {
+      if (Math.sign(number) == 1) {
+        positives++
+      } else if (Math.sign(number) == -1) {
+        negatives += number
+      }
+    }
+    return [positives, negatives]
+  }
+}
+
+console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+
