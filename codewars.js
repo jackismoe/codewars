@@ -174,4 +174,37 @@ const countPositivesSumNegatives = (input) => {
 }
 
 console.log(countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string)
+const solution = (first, second) => {
+  return first.endsWith(second)
+}
 
+solution('abc', 'bc')
+solution('abc', 'd') 
+solution('abcdefg', 'hi') 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function doubleInteger(i) {
+  i *= 2
+  console.log(i)
+  return i;
+}
+
+doubleInteger(1)
+doubleInteger(2)
+doubleInteger(3)
+doubleInteger(4)
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+const makeNegative = num => {
+  if (Math.sign(num) == -1) {
+    return num
+  } else {
+    return num * -1
+  }
+}
+makeNegative(1); // return -1
+makeNegative(-5); // return -5
+makeNegative(0); // return 0
+makeNegative(0.12); //
