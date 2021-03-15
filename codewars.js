@@ -231,6 +231,16 @@ const remove = (string) => {
 }
 
 console.log(remove('Hi!'))
-console.log(remove('Hi!!!!!'))
-console.log(remove('!!!!!!Hi!!!'))
-console.log(remove('Hi!!!!!!!!!!!!!!!!!!!!!!'))
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+const reverseWords = string => {
+  let split = string.split(' ')
+
+  for (let i=0; i < split.length/2; i++) {
+    let temp = split[i]
+    split[i] = split[split.length - i - 1]
+    split[split.length - i - 1] = temp
+  }
+  return split.join(' ')
+}
+
+reverseWords('should work for some examples')
