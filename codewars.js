@@ -218,3 +218,19 @@ const capitalize = string => {
 }
 
 capitalize("codewarriors")
+////////////////////////////////////////////////////////////////////////////////////////////////
+const remove = (string) => {
+  const popItOff = (array) => {
+    array.pop()
+    remove(array.join(''))
+  }
+
+  if (string[string.length - 1] == '!') {
+    popItOff(string.split(''))
+  }
+}
+
+console.log(remove('Hi!'))
+console.log(remove('Hi!!!!!'))
+console.log(remove('!!!!!!Hi!!!'))
+console.log(remove('Hi!!!!!!!!!!!!!!!!!!!!!!'))
