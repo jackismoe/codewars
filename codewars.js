@@ -244,3 +244,27 @@ const reverseWords = string => {
 }
 
 reverseWords('should work for some examples')
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+const switcher = string => {
+  console.log(string)
+  let alphabet =  ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+}
+
+switcher(['24', '12', '23', '22', '4', '26', '9', '8'])
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+// calculate yearly salary based on hourly rate
+
+const salaryHourly = hourly => {
+  return (hourly * 40) * 52
+}
+
+const salaryWeekly = weekly => {
+  return (weekly * 52)
+}
+
+console.log(salaryHourly(46))
+console.log(salaryWeekly(1500))
+
+console.log(95680/2)
